@@ -1,0 +1,90 @@
+[MONGODB] 
+password database user: EIy3FPOao8lK7syG
+conncetion string: mongodb+srv://yusuf:<password>@cluster0.bwnm0.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+[Standar API]
+
+{root.api}/{version}/{grouping}/{endpoint}
+SAMPLE:
+http://vysf.api.yusufism.com/v1/auth/login
+
+
+[Standar Status Response]
+
+200 - OK                        --> Call API Success
+201 - CREATED                   --> Post Success
+400 - BAD REQUEST               --> Error on Client Side
+401 - UNAUTHORIZED              --> User not authorized to the request
+403 - FORBIDDEN                 --> User not allowed to access
+404 - NOT FOUND                 --> Request Endpoint Not Found
+500 - INTERNAL SERVER ERROR     --> Error on Server Side
+502 - BAD GATEAWAY              --> Invalid Response From Another Request
+
+==========================================================================================
+
+GROUP: BLOG
+
+[1] - Create Blog Post
+[POST] : {root.api}/version/blog/post
+
+req:
+{
+    "title": "Title Blog",
+    "image": "imagefile.png",
+    "body": "Lorem bla..bla.."
+}
+
+res:
+{
+    "message": "Create Blog Post Success",
+    "data": {
+        "post_id": 1,
+        "title": "Title Blog",
+        "image": "imagefile.png",
+        "body": "Lorem bla..bla..",
+        "created_at": "12/06/2020",
+        "author": {
+            "uid": 1,
+            "name": "Testing"
+        }
+    }
+}
+
+err-response:
+201 -> Blog Post Berhasil Dibuat
+400 -> Input yang anda masukan tidak valid
+
+==========================================================================================
+
+GROUP: BLOG
+
+[2] - Get Blog Post
+
+req:
+{
+    "title": "Title Blog",
+    "image": "imagefile.png",
+    "body": "Lorem bla..bla.."
+}
+
+res:
+{
+    "message": "Create Blog Post Success",
+    "data": {
+        "post_id": 1,
+        "title": "Title Blog",
+        "image": "imagefile.png",
+        "body": "Lorem bla..bla..",
+        "created_at": "12/06/2020",
+        "author": {
+            "uid": 1,
+            "name": "Testing"
+        }
+    }
+}
+
+err-response:
+201 -> Blog Post Berhasil Dibuat
+400 -> Input yang anda masukan tidak valid
+
+==========================================================================================

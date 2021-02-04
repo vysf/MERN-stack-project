@@ -1,0 +1,73 @@
+folder induk untukk manajemen back-end
+
+[Standar API]
+
+{root.api}/{version}/{grouping}/{endpoint}
+SAMPLE:
+http://vysf.api.yusufism.com/v1/auth/login
+
+
+[Standar Status Response]
+
+200 - OK                        --> Call API Success
+201 - CREATED                   --> Post Success
+400 - BAD REQUEST               --> Error on Client Side
+401 - UNAUTHORIZED              --> User not authorized to the request
+403 - FORBIDDEN                 --> User not allowed to access
+404 - NOT FOUND                 --> Request Endpoint Not Found
+500 - INTERNAL SERVER ERROR     --> Error on Server Side
+502 - BAD GATEAWAY              --> Invalid Response From Another Request
+
+Group: Authentication
+[1] - Register      (http://vysf.api.yusufism.com/v1/auth/register)
+
+req: 
+{
+    "name": "User"
+    "email": "user@gmail.com"
+    "password": "user123"
+}
+
+res:
+{
+    "message": "Register Success"
+    "data": {
+        "id": 1,
+        "name": "User",
+        "email": "user@gmail.com",
+        "password": "user123" - hashed
+    }
+}
+
+err-response:
+201 -> Register Berhasil
+400 -> Input yang anda masukan tidak valid
+401 -> Silahkan email dan password yang benar atau registrasi untuk memiliki akun
+404 -> halaman tidak ditemukan
+
+[2] - Login         (http://vysf.api.yusufism.com/v1/auth/login)
+
+req: 
+{
+    "name": "User"
+    "email": "user@gmail.com"
+    "password": "user123"
+}
+
+res:
+{
+    "message": "Hallo, {name}"
+    "data": {
+        "id": 1,
+        "name": "User",
+        "email": "user@gmail.com",
+        "password": "user123" - hashed
+    }
+}
+
+Group: BLOG
+[1] - Create Blog Post  (https://vysf.api.yusufism.com/v1/blog/create-blog)
+[2] - Get Blog Post     (http://vysf.api.yusufism.com/v1/blog/get-blog)
+[3] - Update Blog Post  (http://vysf.api.yusufism.com/v1/blog/update-blog)
+[4] - Delete Blog Post  (http://vysf.api.yusufism.com/v1/blog/delete-blog)
+
