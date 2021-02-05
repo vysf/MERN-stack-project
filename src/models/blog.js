@@ -5,15 +5,19 @@ const BlogPost = new Schema(
   {
     title: {
       type: String,
-      require: true,
+      required: true,
     },
     body: {
       type: String,
-      require: true,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
     },
     author: {
       type: Object,
-      require: true,
+      required: true,
     },
   },
   {
