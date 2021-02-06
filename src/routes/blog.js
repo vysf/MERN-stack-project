@@ -21,6 +21,11 @@ router.post(
 
 // [GET] : /v1/blog/posts
 // menampilkan semua content blog yang sudah dibuat
+// ? adalah query parameter,
+// 'page' adalah nama querynya yang memulai mau dari page berapa data di tampilkan,
+// & adalah penambahan nama query
+// 'perPage' untuk menampilkan berapa banyak data setiap kali membuka page
+// penulisan query parameter adalah [endpoint]?[NAMA QUERY 1]=[VALUE 1]&[NAMA QUERY ...]=[VALUE ...]
 router.get("/posts", blogController.getAllBlogPost);
 
 // [GET] : /v1/blog/post/:postId
