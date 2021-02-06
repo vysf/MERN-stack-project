@@ -1,6 +1,6 @@
 # MERN-stack-project-api
 
-Ini adalah back-end berupa REST API dari latihan MERN Stack versi 1. API ini dapat melakukan Create, Read, Update, dan Delete blog post. Selanjutnya perlu menambahkan fitur autentikasi akun pengguna.
+Ini adalah back-end berupa REST API dari latihan MERN Stack versi 1. API ini dapat melakukan Create, Read, Update, dan Delete blog post. Selanjutnya perlu menambahkan fitur autentikasi akun pengguna dan membuat dokumentasi untuk penggunaanya.
 
 ### Package
 - body-parser 1.19.0
